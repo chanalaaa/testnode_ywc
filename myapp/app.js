@@ -22,39 +22,33 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/users', users);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+app.get('/users/:username/:email?', (req, res) => {
+    var username = req.params.username
+    var email = req.params.email
+    res.status(200).send(`hello ${username} ${email}`)
+})
 
-// error handlers
+app.get('/shop/:id.:format', (req, res) => {
+    var id = req.params.id
+    var format = req.params.format
+    res.status(200).send(`id:${id} format:${format}`)
+})
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+app.get(/dog/, (req, res) => { //reg
+    res.status(200).send(`u have a dog`)
+})
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
+app.get('/admin', (req, res) => {
+    console.log(req.query)
+
+    if (req.query.username == 'admin') {
+        res.status(200).send(`hi admin`)
+    } else {
+        res.status(400).send(`permission denied`)
+            // res.status(400).send(`u r not admin`)
+    }
+})
 
 
 module.exports = app;
