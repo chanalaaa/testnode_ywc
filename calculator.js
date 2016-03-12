@@ -17,6 +17,7 @@ function divide(num1, num2) {
 function sum(num1, num2, num3) {
     return num1 + num2 + num3
 }
+console.log("ch")
 /*
 module.exports.add = add
 module.exports.minus = minus
