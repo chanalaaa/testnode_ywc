@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/chanalaaa/testnode_ywc#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "ywcworkshop-kao": "^1.0.0"
   }
 }

@@ -8,7 +8,7 @@ function handleRequest (request,response){
 	if(request.url == '/hello'){
 		response.end('hello')
 	}else{
-		response.end(`Invalid url: ${request.url}`)
+		response.end(`Invalid url ${request.url}`)
 	}
 }
 
