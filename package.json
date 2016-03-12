@@ -1,8 +1,9 @@
 {
-  "name": "testnode_ywc",
+  "name": "ywcworkshop-chanala",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "keywords": ["ywcworkshop"],
+  "main": "calculator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
