@@ -39,16 +39,18 @@ app.get(/dog/, (req, res) => { //reg
     res.status(200).send(`u have a dog`)
 })
 
-app.get('/admin', (req, res) => {
+app.get('/admin',checkAdmin, (req, res) => { //using middleware
     console.log(req.query)
-
-    if (req.query.username == 'admin') {
-        res.status(200).send(`hi admin`)
-    } else {
-        res.status(400).send(`permission denied`)
-            // res.status(400).send(`u r not admin`)
-    }
+    res.status(200).send(`hi admin`)
 })
+
+function checkAdmin(req,res,next){ //middleware
+  if (req.query.username != 'admin'){
+     res.status(400).send(`permission denied`)
+  }else{
+    next()
+  }
+}
 
 
 module.exports = app;
