@@ -13,6 +13,10 @@ function multiply(num1, num2) {
 function divide(num1, num2) {
     return num1 / num2
 }
+
+function sum(num1, num2, num3) {
+    return num1 + num2 + num3
+}
 /*
 module.exports.add = add
 module.exports.minus = minus
