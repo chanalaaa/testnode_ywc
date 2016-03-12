@@ -1,0 +1,19 @@
+{
+  "name": "testnode_ywc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanalaaa/testnode_ywc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanalaaa/testnode_ywc/issues"
+  },
+  "homepage": "https://github.com/chanalaaa/testnode_ywc#readme"
+}
