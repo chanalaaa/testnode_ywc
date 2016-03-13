@@ -21,6 +21,7 @@
   "homepage": "https://github.com/chanalaaa/testnode_ywc#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "mongoskin": "^2.0.3",
     "ywcworkshop-kao": "^1.0.0"
   }
 }

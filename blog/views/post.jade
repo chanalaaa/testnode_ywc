@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+  body
+    h1 Jade - node template engine
+    h2= title
+    -var foo = 'hello world'
+    #container.col
+      each val,index in postData
+        p Title: #{val.title}
+        p Body: #{val.body}
+        p Author: #{val.author}
+        p Email: #{val.email}
+        p /============= #{index+1} =================
+
+      p.
+        Jade is a terse and simple
+        templating language with a
+        strong focus on performance
+        and powerful features.
+      
+      p Foo: #{foo}
