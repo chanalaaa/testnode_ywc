@@ -9,7 +9,6 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -22,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//app.use(checkAdmin) //using middelware all path
 
 app.get('/users/:username/:email?', (req, res) => {
     var username = req.params.username
